@@ -16,16 +16,20 @@ class SearchViewController: UIViewController, OutputBoundary {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     @IBAction func search(_ sender: UIButton) {
         Interactor().send(request: SearchRequest(term: searchTextField.text!), outputBoundary: self)
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return identifier != "TracksSegue"
     }
     
     func receive(response: Response<[TrackEntity]>) {
         switch response {
         case let .success(tracks):
             debugPrint(tracks)
-            //self.meals = meals.map(MealPresenter.present)
+            performSegue(withIdentifier: "TracksSegue", sender: self)
         case let .failure(error):
             self.present(error: error, handler: nil)
         }

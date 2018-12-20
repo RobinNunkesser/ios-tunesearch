@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TrackEntity : NSObject{
+class TrackEntity : Decodable{
     let trackNumber: Int
     let trackCount: Int
     let artistName: String
@@ -17,10 +17,9 @@ class TrackEntity : NSObject{
     let discNumber: Int
     let discCount: Int
     let primaryGenreName: String
-    let releaseYear: String
-    let artworkUrl: URL
+    let artworkUrl60: URL
     
-    init(trackNumber: Int, trackCount: Int, artistName: String, trackName: String, collectionName: String, discNumber: Int, discCount: Int, primaryGenreName: String, releaseYear: String, artworkUrl: URL) {
+    init(trackNumber: Int, trackCount: Int, artistName: String, trackName: String, collectionName: String, discNumber: Int, discCount: Int, primaryGenreName: String, releaseYear: String, artworkUrl60: URL) {
         self.trackNumber = trackNumber
         self.trackCount = trackCount
         self.artistName = artistName
@@ -29,38 +28,7 @@ class TrackEntity : NSObject{
         self.discNumber = discNumber
         self.discCount = discCount
         self.primaryGenreName = primaryGenreName
-        self.releaseYear = releaseYear
-        self.artworkUrl = artworkUrl
+        self.artworkUrl60 = artworkUrl60
     }
     
-    
-    /*
-     Code Field
-     a Artist
-     A Artist (no clobber)
-     b BPM
-     c Comments
-     C Composer
-     d Disc Number D Disc Count
-     e Played Date
-     f File Name (read-only)
-     g Genre
-     G Genre (no clobber)
-     l Album
-     L Album (no clobber)
-     n Song Name
-     p Played Count
-     r Grouping
-     R Grouping (no clobber)
-     t Track Number
-     T Track Count
-     y Y ear
-     0 Nothing (skip the text)
-     # Rating (Between 0 and 100)
-    
-     %t|%T|%a|%n|%l|%d|%D|%g|%y
-     */
-    override var description : String {
-        return "\(trackNumber)|\(trackCount)|\(artistName)|\(trackName)|\(collectionName)|\(discNumber)|\(discCount)|\(primaryGenreName)|\(releaseYear)"
-    }
 }

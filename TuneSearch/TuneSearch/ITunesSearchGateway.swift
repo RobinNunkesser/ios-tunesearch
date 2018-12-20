@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 class ITunesSearchGateway {
-    fileprivate let baseURLString = "https://itunes.apple.com/search"
-    
+    let baseURLString = "https://itunes.apple.com/search"
+        
     func restURL(_ parameters: [String:String]?) -> URL? {
         var components = URLComponents(string: baseURLString)!
         var queryItems = [URLQueryItem]()
@@ -34,15 +34,10 @@ class ITunesSearchGateway {
                     switch response.result {
                     case .success:
                         do {
-                            debugPrint(response.data!)                            
-                            /*                        let decoder = JSONDecoder()
-                             let items = try decoder.decode(ProfsAPI.JSONService.self,
+                            let decoder = JSONDecoder()
+                             let items = try decoder.decode(ResultsEntity.self,
                              from: response.data!)
-                             
-                             completion(Gateway.Response<[StandardProfEntity]>
-                             .success(items.docs))*/
-                            completion(Response<[TrackEntity]>
-                                .success([]))
+                            completion(Response<[TrackEntity]>.success(items.results))
                         } catch {
                             completion(Response.failure(error))
                         }
