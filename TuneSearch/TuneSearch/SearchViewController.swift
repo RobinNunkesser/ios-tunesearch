@@ -10,7 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController, OutputBoundary {
     typealias EntityType = [TrackEntity]
-    var orderedTracks : [String:[TracksTableViewController.ViewModel]] = [:]
+    var orderedTracks : [String:[TrackViewModel]] = [:]
     
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -19,6 +19,7 @@ class SearchViewController: UIViewController, OutputBoundary {
     }
     
     @IBAction func search(_ sender: UIButton) {
+        orderedTracks = [:]
         Interactor().send(request: SearchRequest(term: searchTextField.text!), outputBoundary: self)
     }
     
@@ -41,7 +42,7 @@ class SearchViewController: UIViewController, OutputBoundary {
                 if !orderedTracks.keys.contains(track.collectionName) {
                     orderedTracks[track.collectionName] = []
                 }
-                orderedTracks[track.collectionName]!.append(TracksTableViewController.ViewModel(title: track.trackName, subtitle: track.artistName))
+                orderedTracks[track.collectionName]!.append(TrackPresenter.present(entity: track))
             }
             performSegue(withIdentifier: "TracksSegue", sender: self)
         case let .failure(error):
@@ -49,4 +50,3 @@ class SearchViewController: UIViewController, OutputBoundary {
         }
     }
 }
-
