@@ -1,14 +1,26 @@
-//
-//  Track.swift
-//  iTunesHelper
-//
 //  Created by Prof. Dr. Nunkesser, Robin on 26.10.16.
 //  Copyright © 2016 Hochschule Hamm-Lippstadt. All rights reserved.
 //
 
 import Foundation
 
-class TrackEntity : Decodable{
+class TrackEntity : Decodable, Comparable{
+    static func < (lhs: TrackEntity, rhs: TrackEntity) -> Bool {
+        if lhs.collectionName != rhs.collectionName {
+            return lhs.collectionName < rhs.collectionName
+        }
+        if lhs.discNumber != rhs.discNumber {
+            return lhs.discNumber < rhs.discNumber
+        }
+        return lhs.trackNumber < rhs.trackNumber
+    }
+    
+    static func == (lhs: TrackEntity, rhs: TrackEntity) -> Bool {
+        return (lhs.collectionName == rhs.collectionName) &&
+            (lhs.trackNumber == rhs.trackNumber) &&
+        (lhs.discNumber == rhs.discNumber)
+    }
+    
     let trackNumber: Int
     let trackCount: Int
     let artistName: String

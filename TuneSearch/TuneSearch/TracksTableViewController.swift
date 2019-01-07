@@ -24,10 +24,7 @@ class TracksTableViewController : UITableViewController {
     
     // MARK: - Properties
     
-    var items : [ViewModel] = [ViewModel(title:"Title 1",
-                                         subtitle:"Subtitle 1"),
-                               ViewModel(title:"Title 2",
-                                         subtitle:"Subtitle 2")]
+    var items : [String:[ViewModel]]!
     
     // MARK: - Methods
     // MARK: Lifecycle
@@ -38,9 +35,18 @@ class TracksTableViewController : UITableViewController {
     
     // MARK: UITableViewDataSource
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return items.keys.count
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            titleForHeaderInSection section: Int) -> String? {
+        return Array(items.keys)[section]
+    }
+
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items[Array(items.keys)[section]]!.count
     }
     
     override func tableView(_ tableView: UITableView,
@@ -49,7 +55,7 @@ class TracksTableViewController : UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier:
                 "SubtitleCell",
                                                      for: indexPath)
-            let item = items[indexPath.row]
+            let item = items[Array(items.keys)[indexPath.section]]![indexPath.row]
             cell.textLabel?.text = item.title
             cell.detailTextLabel?.text = item.subtitle
             return cell

@@ -1,5 +1,4 @@
 //  OutputBoundary.swift
-//  AsynchronRecipe
 
 import Foundation
 
