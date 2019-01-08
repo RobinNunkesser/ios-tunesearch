@@ -44,11 +44,12 @@ class TracksTableViewController : UITableViewController {
                             cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier:
-                "SubtitleCell",
-                                                     for: indexPath)
+                TrackTableViewCell.reuseIdentifier,
+                                                     for: indexPath) as! TrackTableViewCell
             let item = items[collections[indexPath.section]]![indexPath.row]
-            cell.textLabel?.text = item.title
-            cell.detailTextLabel?.text = item.subtitle
+            cell.titleLabel.text = item.title
+            cell.subtitleLabel.text = item.subtitle
+            cell.collectionImage.imageFromUrl(url: item.image)
             return cell
     }
     

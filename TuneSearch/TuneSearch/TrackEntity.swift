@@ -30,8 +30,9 @@ class TrackEntity : Decodable, Comparable{
     let discCount: Int
     let primaryGenreName: String
     let artworkUrl60: URL
+    let artworkUrl100: URL
     
-    init(trackNumber: Int, trackCount: Int, artistName: String, trackName: String, collectionName: String, discNumber: Int, discCount: Int, primaryGenreName: String, releaseYear: String, artworkUrl60: URL) {
+    init(trackNumber: Int, trackCount: Int, artistName: String, trackName: String, collectionName: String, discNumber: Int, discCount: Int, primaryGenreName: String, releaseYear: String, artworkUrl60: URL, artworkUrl100: URL) {
         self.trackNumber = trackNumber
         self.trackCount = trackCount
         self.artistName = artistName
@@ -41,6 +42,7 @@ class TrackEntity : Decodable, Comparable{
         self.discCount = discCount
         self.primaryGenreName = primaryGenreName
         self.artworkUrl60 = artworkUrl60
+        self.artworkUrl100 = artworkUrl100
     }
     
 }

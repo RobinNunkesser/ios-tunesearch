@@ -15,7 +15,7 @@ class TrackPresenter: Presenter {
     typealias ViewModel = TrackViewModel
     
     static func present(entity: TrackEntity) -> TrackViewModel {
-        return TrackViewModel(title: "\(entity.trackNumber) - \(entity.trackName)", subtitle: entity.artistName)
+        return TrackViewModel(title: "\(entity.trackNumber) - \(entity.trackName)", subtitle: entity.artistName, image: entity.artworkUrl100)
     }
 
 }

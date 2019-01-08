@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A05066DF2293D770B0C199E17F1D7D04"
-               BlueprintName = "Pods-TuneSearch"
+               BlueprintIdentifier = "9EFE4C70245EE2857D336B8B9FA4E825"
+               BlueprintName = "AlamofireImage"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-TuneSearch.framework">
+               BuildableName = "AlamofireImage.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -11,9 +11,11 @@ import Foundation
 class TrackViewModel {
     let title : String
     let subtitle : String
+    let image: URL
     
-    init(title : String, subtitle : String) {
+    init(title : String, subtitle : String, image: URL) {
         self.title = title
         self.subtitle = subtitle
+        self.image = image
     }
 }
