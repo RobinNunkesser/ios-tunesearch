@@ -3,6 +3,6 @@
 import Foundation
 
 protocol OutputBoundary {
-    associatedtype EntityType    
-    func receive(response : Response<EntityType>)
+    associatedtype ViewModelType    
+    func receive(response : Response<ViewModelType>)
 }

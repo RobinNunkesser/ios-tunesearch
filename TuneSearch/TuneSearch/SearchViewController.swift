@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController, OutputBoundary {
-    typealias EntityType = [TrackEntity]
+    typealias ViewModelType = [String:[TrackViewModel]]
     var orderedTracks : [String:[TrackViewModel]] = [:]
     
     @IBOutlet weak var searchTextField: UITextField!
@@ -35,15 +35,10 @@ class SearchViewController: UIViewController, OutputBoundary {
         
     }
     
-    func receive(response: Response<[TrackEntity]>) {
+    func receive(response: Response<[String:[TrackViewModel]]>) {
         switch response {
-        case let .success(tracks):
-            for track in tracks.sorted() {
-                if !orderedTracks.keys.contains(track.collectionName) {
-                    orderedTracks[track.collectionName] = []
-                }
-                orderedTracks[track.collectionName]!.append(TrackPresenter.present(entity: track))
-            }
+        case let .success(result):
+            orderedTracks = result
             performSegue(withIdentifier: "TracksSegue", sender: self)
         case let .failure(error):
             self.present(error: error, handler: nil)
