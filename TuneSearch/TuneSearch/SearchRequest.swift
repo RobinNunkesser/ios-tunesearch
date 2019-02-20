@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SearchRequest : Request {
+class SearchRequest {
     let term: String
     
     init(term: String) {
