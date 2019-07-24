@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import BasicCleanArch
 
-class SearchViewController: UIViewController, OutputBoundary {
+class SearchViewController: UIViewController, Displayer {
     typealias ViewModelType = [String:[TrackViewModel]]
     var orderedTracks : [String:[TrackViewModel]] = [:]
     
@@ -20,7 +21,7 @@ class SearchViewController: UIViewController, OutputBoundary {
     
     @IBAction func search(_ sender: UIButton) {
         orderedTracks = [:]
-        Interactor().send(request: SearchRequest(term: searchTextField.text!), outputBoundary: self)
+        Interactor(presenter: TrackPresenter()).execute(request: SearchRequest(term: searchTextField.text!), displayer: self)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -35,8 +36,8 @@ class SearchViewController: UIViewController, OutputBoundary {
         
     }
     
-    func receive(response: Response<[String:[TrackViewModel]]>) {
-        switch response {
+    func display(result: Result<[String : [TrackViewModel]], Error>) {
+        switch result {
         case let .success(result):
             orderedTracks = result
             performSegue(withIdentifier: "TracksSegue", sender: self)

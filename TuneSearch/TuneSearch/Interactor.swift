@@ -1,12 +1,25 @@
 import Foundation
+import BasicCleanArch
 
-class Interactor : InputBoundary {
-    typealias OutputBoundaryType = SearchViewController
+class Interactor : UseCase {
+    typealias DisplayerType = SearchViewController
+    typealias PresenterType = TrackPresenter
     typealias RequestType = SearchRequest
+
+    var presenter: TrackPresenter
+    var gateway: ITunesSearchGateway
     
-    func send(request: SearchRequest,
-              outputBoundary: SearchViewController) {
-        ITunesSearchGateway().fetchData(searchTerm: request.term, completion:
+    init(presenter : TrackPresenter, gateway: ITunesSearchGateway) {
+        self.presenter = presenter
+        self.gateway = gateway
+    }
+    
+    required convenience init(presenter : TrackPresenter) {
+        self.init(presenter: presenter, gateway: ITunesSearchGateway())
+    }
+
+    func execute(request: SearchRequest, displayer: SearchViewController) {
+        gateway.fetchData(searchTerm: request.term, completion:
             {
                 switch $0 {
                 case let .success(tracks):
@@ -15,11 +28,11 @@ class Interactor : InputBoundary {
                         if !orderedTracks.keys.contains(track.collectionName) {
                             orderedTracks[track.collectionName] = []
                         }
-                        orderedTracks[track.collectionName]!.append(TrackPresenter.present(entity: track))
+                        orderedTracks[track.collectionName]!.append(self.presenter.present(model: track))
                     }
-                    outputBoundary.receive(response: Response.success(orderedTracks))
+                    displayer.display(result: Result.success(orderedTracks))
                 case let .failure(error):
-                    outputBoundary.receive(response: Response.failure(error))
+                    displayer.display(result: Result.failure(error))
                 }                
         })
     }

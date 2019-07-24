@@ -7,22 +7,21 @@
 //
 
 import Foundation
+import BasicCleanArch
 
 class TrackPresenter: Presenter {
-    
-    typealias Entity = TrackEntity
-    
+    typealias Model = TrackEntity
     typealias ViewModel = TrackViewModel
     
-    static func present(entity: TrackEntity) -> TrackViewModel {
+    func present(model: TrackEntity) -> TrackViewModel {
         var title = ""
-        if let trackNumber = entity.trackNumber {
+        if let trackNumber = model.trackNumber {
             title = "\(trackNumber) -"
         }
-        if let trackName = entity.trackName {
+        if let trackName = model.trackName {
             title = title + "\(trackName)"
         }
-        return TrackViewModel(title: title, subtitle: entity.artistName, image: entity.artworkUrl100)
+        return TrackViewModel(title: title, subtitle: model.artistName, image: model.artworkUrl100)
     }
 
 }

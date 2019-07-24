@@ -25,7 +25,7 @@ class ITunesSearchGateway {
         return components.url!
     }
     
-    func fetchData(searchTerm: String, completion: @escaping (Response<[TrackEntity]>) -> Void) {
+    func fetchData(searchTerm: String, completion: @escaping (Swift.Result<[TrackEntity],Error>) -> Void) {
         if let url = restURL(["term":"\(searchTerm)","entity":"song","country":"de"]) {
             Alamofire.request(url)
                 .validate()
@@ -37,12 +37,12 @@ class ITunesSearchGateway {
                             let decoder = JSONDecoder()
                              let items = try decoder.decode(ResultsEntity.self,
                              from: response.data!)
-                            completion(Response<[TrackEntity]>.success(items.results))
+                            completion(Swift.Result<[TrackEntity],Error>.success(items.results))
                         } catch {
-                            completion(Response.failure(error))
+                            completion(Swift.Result.failure(error))
                         }
                     case .failure(let error):
-                        completion(Response.failure(error))
+                        completion(Swift.Result.failure(error))
                     }
             }
         }
