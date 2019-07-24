@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8B52C976853E58759BA09A701071784"
-               BlueprintName = "Pods-TuneSearch"
+               BlueprintIdentifier = "45EB23C96FA448E6A0BDE4B6E3C8669C"
+               BlueprintName = "BasicCleanArch"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-TuneSearch.framework">
+               BuildableName = "BasicCleanArch.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

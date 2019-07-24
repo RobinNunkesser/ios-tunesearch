@@ -9,9 +9,9 @@ target 'TuneSearch' do
   use_frameworks!
 
   # Pods for TuneSearch
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '~> 4.8'
   pod 'AlamofireImage', '~> 3.5'
-  
+  pod 'BasicCleanArch', '~> 5'
 
   target 'TuneSearchTests' do
     inherit! :search_paths

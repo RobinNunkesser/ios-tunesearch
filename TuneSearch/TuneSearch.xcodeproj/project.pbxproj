@@ -15,7 +15,6 @@
 		6F6A339221CA6C6F00B02BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6A339021CA6C6F00B02BE1 /* LaunchScreen.storyboard */; };
 		6F6A339D21CA6C6F00B02BE1 /* TuneSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A339C21CA6C6F00B02BE1 /* TuneSearchTests.swift */; };
 		6F6A33AB21CA713700B02BE1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A33A721CA713700B02BE1 /* Response.swift */; };
-		6F6A33AC21CA713700B02BE1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A33A821CA713700B02BE1 /* Request.swift */; };
 		6F6A33AD21CA713700B02BE1 /* InputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A33A921CA713700B02BE1 /* InputBoundary.swift */; };
 		6F6A33AE21CA713700B02BE1 /* OutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A33AA21CA713700B02BE1 /* OutputBoundary.swift */; };
 		6F6A33B021CA729000B02BE1 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A33AF21CA729000B02BE1 /* TrackEntity.swift */; };
@@ -58,7 +57,6 @@
 		6F6A339C21CA6C6F00B02BE1 /* TuneSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneSearchTests.swift; sourceTree = "<group>"; };
 		6F6A339E21CA6C6F00B02BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F6A33A721CA713700B02BE1 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		6F6A33A821CA713700B02BE1 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		6F6A33A921CA713700B02BE1 /* InputBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBoundary.swift; sourceTree = "<group>"; };
 		6F6A33AA21CA713700B02BE1 /* OutputBoundary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputBoundary.swift; sourceTree = "<group>"; };
 		6F6A33AF21CA729000B02BE1 /* TrackEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				6F6A33B521CA87C300B02BE1 /* UIViewController+ErrorAlert.swift */,
 				6F6A33AA21CA713700B02BE1 /* OutputBoundary.swift */,
 				6F8400B121E4B0ED0054484E /* UIImageView+AsyncImageLoad.swift */,
-				6F6A33A821CA713700B02BE1 /* Request.swift */,
 				6F6A33A721CA713700B02BE1 /* Response.swift */,
 				6F8400AB21E37EA40054484E /* Presenter.swift */,
 			);
@@ -246,9 +243,11 @@
 				TargetAttributes = {
 					6F6A338321CA6C6E00B02BE1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					6F6A339721CA6C6F00B02BE1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6F6A338321CA6C6E00B02BE1;
 					};
 				};
@@ -260,6 +259,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 6F6A337B21CA6C6E00B02BE1;
 			productRefGroup = 6F6A338521CA6C6E00B02BE1 /* Products */;
@@ -318,19 +318,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TuneSearch/Pods-TuneSearch-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuneSearch/Pods-TuneSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TuneSearch/Pods-TuneSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuneSearch/Pods-TuneSearch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuneSearch/Pods-TuneSearch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0CF7D43D70F9045F55D5073 /* [CP] Check Pods Manifest.lock */ = {
@@ -363,7 +360,6 @@
 				6F6A33AD21CA713700B02BE1 /* InputBoundary.swift in Sources */,
 				6F6A33B621CA87C300B02BE1 /* UIViewController+ErrorAlert.swift in Sources */,
 				6F6A338A21CA6C6E00B02BE1 /* SearchViewController.swift in Sources */,
-				6F6A33AC21CA713700B02BE1 /* Request.swift in Sources */,
 				6F6A33C021CBED0200B02BE1 /* TracksTableViewController.swift in Sources */,
 				6F6A33AB21CA713700B02BE1 /* Response.swift in Sources */,
 				6F6A338821CA6C6E00B02BE1 /* AppDelegate.swift in Sources */,
@@ -560,7 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.hshl.isd.TuneSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -579,7 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.hshl.isd.TuneSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -600,7 +596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.hshl.isd.TuneSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuneSearch.app/TuneSearch";
 			};
@@ -622,7 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.hshl.isd.TuneSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuneSearch.app/TuneSearch";
 			};

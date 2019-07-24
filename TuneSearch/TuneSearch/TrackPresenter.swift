@@ -15,7 +15,14 @@ class TrackPresenter: Presenter {
     typealias ViewModel = TrackViewModel
     
     static func present(entity: TrackEntity) -> TrackViewModel {
-        return TrackViewModel(title: "\(entity.trackNumber) - \(entity.trackName)", subtitle: entity.artistName, image: entity.artworkUrl100)
+        var title = ""
+        if let trackNumber = entity.trackNumber {
+            title = "\(trackNumber) -"
+        }
+        if let trackName = entity.trackName {
+            title = title + "\(trackName)"
+        }
+        return TrackViewModel(title: title, subtitle: entity.artistName, image: entity.artworkUrl100)
     }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8B52C976853E58759BA09A701071784"
-               BlueprintName = "Pods-TuneSearch"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-TuneSearch.framework">
+               BlueprintIdentifier = "D9244CEE11744E7669B126B6BBA1F379"
+               BuildableName = "BasicCleanArch.framework"
+               BlueprintName = "BasicCleanArch"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

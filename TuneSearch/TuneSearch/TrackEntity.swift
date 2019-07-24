@@ -4,15 +4,15 @@
 
 import Foundation
 
-class TrackEntity : Decodable, Comparable{
+class TrackEntity : Codable, Comparable{
     static func < (lhs: TrackEntity, rhs: TrackEntity) -> Bool {
         if lhs.collectionName != rhs.collectionName {
             return lhs.collectionName < rhs.collectionName
         }
         if lhs.discNumber != rhs.discNumber {
-            return lhs.discNumber < rhs.discNumber
+            return lhs.discNumber ?? 0 < rhs.discNumber ?? 0
         }
-        return lhs.trackNumber < rhs.trackNumber
+        return lhs.trackNumber ?? 0 < rhs.trackNumber ?? 0
     }
     
     static func == (lhs: TrackEntity, rhs: TrackEntity) -> Bool {
@@ -21,13 +21,13 @@ class TrackEntity : Decodable, Comparable{
         (lhs.discNumber == rhs.discNumber)
     }
     
-    let trackNumber: Int
+    let trackNumber: Int?
     let trackCount: Int
     let artistName: String
-    let trackName: String
+    let trackName: String?
     let collectionName: String
-    let discNumber: Int
-    let discCount: Int
+    let discNumber: Int?
+    let discCount: Int?
     let primaryGenreName: String
     let artworkUrl60: URL
     let artworkUrl100: URL
