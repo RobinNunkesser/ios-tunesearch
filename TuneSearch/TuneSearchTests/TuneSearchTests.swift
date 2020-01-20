@@ -2,8 +2,8 @@
 //  TuneSearchTests.swift
 //  TuneSearchTests
 //
-//  Created by Prof. Dr. Nunkesser, Robin on 19.12.18.
-//  Copyright © 2018 Hochschule Hamm-Lippstadt. All rights reserved.
+//  Created by Prof. Dr. Nunkesser, Robin on 15.01.20.
+//  Copyright © 2020 Hochschule Hamm-Lippstadt. All rights reserved.
 //
 
 import XCTest

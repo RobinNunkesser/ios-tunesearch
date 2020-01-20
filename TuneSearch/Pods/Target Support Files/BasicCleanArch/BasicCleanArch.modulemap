@@ -1,6 +1,0 @@
-framework module BasicCleanArch {
-  umbrella header "BasicCleanArch-umbrella.h"
-
-  export *
-  module * { export * }
-}

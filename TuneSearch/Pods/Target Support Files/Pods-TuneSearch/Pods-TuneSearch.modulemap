@@ -1,6 +1,0 @@
-framework module Pods_TuneSearch {
-  umbrella header "Pods-TuneSearch-umbrella.h"
-
-  export *
-  module * { export * }
-}
