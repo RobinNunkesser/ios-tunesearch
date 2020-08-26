@@ -1,0 +1,18 @@
+language:  swift
+
+os:   
+    - osx
+osx_image: 
+    - xcode11.6
+    - xcode12
+env: 
+    - PROJECT="TuneSearch"
+
+script:
+    - cd $PROJECT
+    - set -o pipefail && travis_wait xcodebuild test -enableCodeCoverage YES 
+      -scheme $PROJECT -sdk iphonesimulator 
+      -destination 'platform=iOS Simulator,name=iPhone 11' 
+      ONLY_ACTIVE_ARCH=NO | xcpretty
+    - cd ..
+
