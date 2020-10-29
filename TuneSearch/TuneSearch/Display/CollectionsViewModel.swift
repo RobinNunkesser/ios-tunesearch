@@ -10,11 +10,4 @@ import Foundation
 
 class CollectionsViewModel : ObservableObject {
     @Published var collections : [CollectionViewModel] = []
-    
-    @Published var tracks : [TrackViewModel] = []
-    
-    @Published var items : [String:[TrackViewModel]]!
-    /*var collections : [String] {
-        return Array(items.keys)
-    }*/
 }

@@ -25,15 +25,6 @@ class SearchInteractor : UseCase {
                 switch $0 {
                 case let .success(tracks):
                     let collections = self.presenter.present(model: tracks)
-                    /*
-                    var orderedTracks : [String:[TrackViewModel]] = [:]
-                    for track in tracks.sorted() {
-                        if !orderedTracks.keys.contains(track.collectionName) {
-                            orderedTracks[track.collectionName] = []
-                        }
-                        orderedTracks[track.collectionName]!.append(self.presenter.present(model: track))
-                    }
- */
                     displayer.display(success: collections,resultCode: resultCode)
                 case let .failure(error):
                     displayer.display(failure: error)
