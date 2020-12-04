@@ -32,6 +32,7 @@
 		6FCDC41323D03B4100DCC8D6 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41223D03B4100DCC8D6 /* CollectionViewModel.swift */; };
 		6FCDC41623D0511200DCC8D6 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FCDC41523D0511200DCC8D6 /* URLImage */; };
 		6FCDC41823D051D100DCC8D6 /* CollectionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41723D051D100DCC8D6 /* CollectionsPresenter.swift */; };
+		6FE154A4257AE3BD006D1297 /* TunesearchMockCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6FE154A3257AE3BD006D1297 /* TunesearchMockCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 				6F5EFCAB23CF3C84002DDCA4 /* BasicCleanArch in Frameworks */,
 				6F5EFCAE23CF3CFC002DDCA4 /* Alamofire in Frameworks */,
 				6FCDC41623D0511200DCC8D6 /* URLImage in Frameworks */,
+				6FE154A4257AE3BD006D1297 /* TunesearchMockCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +205,7 @@
 				6F5EFCAA23CF3C84002DDCA4 /* BasicCleanArch */,
 				6F5EFCAD23CF3CFC002DDCA4 /* Alamofire */,
 				6FCDC41523D0511200DCC8D6 /* URLImage */,
+				6FE154A3257AE3BD006D1297 /* TunesearchMockCore */,
 			);
 			productName = TuneSearch;
 			productReference = 6F5EFC8423CEFF7F002DDCA4 /* TuneSearch.app */;
@@ -259,6 +262,7 @@
 				6F5EFCA923CF3C84002DDCA4 /* XCRemoteSwiftPackageReference "basiccleanarch-cocoapod" */,
 				6F5EFCAC23CF3CFC002DDCA4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6FCDC41423D0511200DCC8D6 /* XCRemoteSwiftPackageReference "url-image" */,
+				6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */,
 			);
 			productRefGroup = 6F5EFC8523CEFF7F002DDCA4 /* Products */;
 			projectDirPath = "";
@@ -612,6 +616,14 @@
 				minimumVersion = 0.9.9;
 			};
 		};
+		6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-mockcore-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -629,6 +641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6FCDC41423D0511200DCC8D6 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
+		};
+		6FE154A3257AE3BD006D1297 /* TunesearchMockCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */;
+			productName = TunesearchMockCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

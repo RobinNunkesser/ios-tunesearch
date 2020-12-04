@@ -8,6 +8,7 @@
 
 import SwiftUI
 import BasicCleanArch
+import TunesearchMockCore
 
 struct SearchView: View, Displayer {
     typealias ViewModelType = [CollectionViewModel]
@@ -39,6 +40,8 @@ struct SearchView: View, Displayer {
     }
     
     func startSearch() {
+        let service = MockSearchTracksCommand()
+        // TODO: Mock is integrated but not yet called
         SearchInteractor(presenter: CollectionsPresenter()).execute(request: SearchRequest(term: searchText), displayer: self)
     }
     
