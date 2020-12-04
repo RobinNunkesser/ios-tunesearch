@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "ExplicitArchitecture",
+        "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "22f239b1f42c9bb797341584aca94cc31484619a",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "URLImage",
         "repositoryURL": "https://github.com/dmytro-anokhin/url-image",
         "state": {
