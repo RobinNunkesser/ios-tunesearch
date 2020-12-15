@@ -9,9 +9,9 @@
 import SwiftUI
 import BasicCleanArch
 import TunesearchMockCore
+import TunesearchCorePorts
 
-struct SearchView: View, Displayer {
-    typealias ViewModelType = [CollectionViewModel]
+struct SearchView: View {
     
     @State var searchText = "Jack Johnson"
     @State var navigate : Bool?
@@ -41,8 +41,15 @@ struct SearchView: View, Displayer {
     
     func startSearch() {
         let service = MockSearchTracksCommand()
-        // TODO: Mock is integrated but not yet called
-        SearchInteractor(presenter: CollectionsPresenter()).execute(request: SearchRequest(term: searchText), displayer: self)
+        service.execute(inDTO: SearchTermDTO(term: searchText)) {
+            result in
+            switch result {
+            case let .success(collections):
+                display(success: collections.map({collection in CollectionViewModel(name: collection.name, tracks: collection.tracks.map({track in TrackPresenter().present(model: track)}))}))
+            case let .failure(error):
+                display(failure: error)
+            }
+        }
     }
     
     func display(failure: Error) {
@@ -50,7 +57,7 @@ struct SearchView: View, Displayer {
         showError.toggle()
     }
     
-    func display(success: [CollectionViewModel], resultCode: Int) {
+    func display(success: [CollectionViewModel]) {
         collectionsViewModel.collections = success
         self.navigate = true
     }

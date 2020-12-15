@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import BasicCleanArch
+import TunesearchCorePorts
 
-class TrackPresenter: Presenter {
-    typealias Model = TrackEntity
-    typealias ViewModel = TrackViewModel
+class TrackPresenter {
     
-    func present(model: TrackEntity) -> TrackViewModel {
+    func present(model: Track) -> TrackViewModel {
         var title = ""
         if let trackNumber = model.trackNumber {
             title = "\(trackNumber) -"
@@ -21,7 +19,7 @@ class TrackPresenter: Presenter {
         if let trackName = model.trackName {
             title = title + "\(trackName)"
         }
-        return TrackViewModel(title: title, subtitle: model.artistName, image: model.artworkUrl100)
+        return TrackViewModel(title: title, subtitle: model.artistName, image: model.artworkUrl)
     }
 
 }

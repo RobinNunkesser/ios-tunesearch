@@ -9,13 +9,13 @@
 import Foundation
 import BasicCleanArch
 
-class CollectionsPresenter : Presenter {
+class CollectionsPresenter {
     typealias Model = [TrackEntity]
     typealias ViewModel = [CollectionViewModel]
     
     let presenter = TrackPresenter()
     
-    func present(model: [TrackEntity]) -> [CollectionViewModel] {
+    /*func present(model: [TrackEntity]) -> [CollectionViewModel] {
         var collections : [String:CollectionViewModel] = [:]
         for track in model.sorted() {
             if !collections.keys.contains(track.collectionName) {
@@ -25,6 +25,6 @@ class CollectionsPresenter : Presenter {
         }
         let values = Array(collections.values)
         return values
-    }
+    }*/
 
 }

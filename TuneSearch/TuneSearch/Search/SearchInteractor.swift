@@ -1,7 +1,7 @@
 import Foundation
 import BasicCleanArch
 
-class SearchInteractor : UseCase {
+class SearchInteractor {
     
     typealias DisplayerType = SearchView
     typealias PresenterType = CollectionsPresenter
@@ -20,15 +20,15 @@ class SearchInteractor : UseCase {
     }
 
     func execute(request: SearchRequest, displayer: SearchView, resultCode: Int) {
-        gateway.fetchData(searchTerm: request.term, completion:
+        /*gateway.fetchData(searchTerm: request.term, completion:
             {
                 switch $0 {
                 case let .success(tracks):
                     let collections = self.presenter.present(model: tracks)
-                    displayer.display(success: collections,resultCode: resultCode)
+                    displayer.display(success: collections)
                 case let .failure(error):
                     displayer.display(failure: error)
                 }                
-        })
+        })*/
     }
 }

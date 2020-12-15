@@ -27,6 +27,7 @@
 		6F5EFCCA23CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCC923CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift */; };
 		6F5EFCCC23CF4D1C002DDCA4 /* TracksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCCB23CF4D1C002DDCA4 /* TracksListView.swift */; };
 		6F5EFCCE23CF5DE9002DDCA4 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCCD23CF5DE9002DDCA4 /* CollectionsViewModel.swift */; };
+		6FA41AA725891F36001F7674 /* SearchTermDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA41AA625891F36001F7674 /* SearchTermDTO.swift */; };
 		6FBFA76F23D6299D00DEE6E8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6FBFA76E23D6299D00DEE6E8 /* Settings.bundle */; };
 		6FCDC41123D03A4B00DCC8D6 /* TrackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41023D03A4B00DCC8D6 /* TrackRow.swift */; };
 		6FCDC41323D03B4100DCC8D6 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41223D03B4100DCC8D6 /* CollectionViewModel.swift */; };
@@ -69,6 +70,7 @@
 		6F5EFCC923CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesSearchGatewayTests.swift; sourceTree = "<group>"; };
 		6F5EFCCB23CF4D1C002DDCA4 /* TracksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksListView.swift; sourceTree = "<group>"; };
 		6F5EFCCD23CF5DE9002DDCA4 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
+		6FA41AA625891F36001F7674 /* SearchTermDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTermDTO.swift; sourceTree = "<group>"; };
 		6FBFA76E23D6299D00DEE6E8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6FCDC41023D03A4B00DCC8D6 /* TrackRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackRow.swift; sourceTree = "<group>"; };
 		6FCDC41223D03B4100DCC8D6 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				6F5EFCB823CF3E4B002DDCA4 /* SearchRequest.swift */,
 				6F5EFCB923CF3E4B002DDCA4 /* TrackPresenter.swift */,
 				6FCDC41723D051D100DCC8D6 /* CollectionsPresenter.swift */,
+				6FA41AA625891F36001F7674 /* SearchTermDTO.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				6F5EFCBC23CF3E4B002DDCA4 /* SearchInteractor.swift in Sources */,
 				6F5EFC8823CEFF7F002DDCA4 /* AppDelegate.swift in Sources */,
 				6FCDC41323D03B4100DCC8D6 /* CollectionViewModel.swift in Sources */,
+				6FA41AA725891F36001F7674 /* SearchTermDTO.swift in Sources */,
 				6F5EFCBF23CF3E4B002DDCA4 /* ITunesSearchGateway.swift in Sources */,
 				6F5EFC8A23CEFF7F002DDCA4 /* SceneDelegate.swift in Sources */,
 				6FCDC41823D051D100DCC8D6 /* CollectionsPresenter.swift in Sources */,
@@ -621,7 +625,7 @@
 			repositoryURL = "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-mockcore-spm.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 0.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

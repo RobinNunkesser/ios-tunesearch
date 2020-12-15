@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-core-ports-spm.git",
         "state": {
           "branch": null,
-          "revision": "559ff754efb44c28d49d358623cd1ceaa10f2397",
-          "version": "0.0.1"
+          "revision": "e890056e3ee30245ce19a41e6be10a34a4e17754",
+          "version": "0.0.2"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-mockcore-spm.git",
         "state": {
           "branch": null,
-          "revision": "7af059bd9b096edcb11eb69f7ab83f62422b3cc4",
-          "version": "0.0.1"
+          "revision": "29588c709164b2882640b9728222d547de855562",
+          "version": "0.0.2"
         }
       },
       {
