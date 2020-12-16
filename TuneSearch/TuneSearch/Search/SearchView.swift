@@ -8,8 +8,8 @@
 
 import SwiftUI
 import BasicCleanArch
-import TunesearchMockCore
-import TunesearchCorePorts
+import TuneSearchCore
+import TuneSearchInfrastructure
 
 struct SearchView: View {
     
@@ -40,7 +40,7 @@ struct SearchView: View {
     }
     
     func startSearch() {
-        let service = MockSearchTracksCommand()
+        let service = ConcreteSearchTracksCommand(tunesSearchEngine: TunesSearchEngineAdapter())
         service.execute(inDTO: SearchTermDTO(term: searchText)) {
             result in
             switch result {

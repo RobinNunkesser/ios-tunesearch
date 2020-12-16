@@ -19,7 +19,7 @@ class TrackPresenter {
         if let trackName = model.trackName {
             title = title + "\(trackName)"
         }
-        return TrackViewModel(title: title, subtitle: model.artistName, image: model.artworkUrl)
+        return TrackViewModel(title: title, subtitle: model.artistName!, image: model.artworkUrl!)
     }
 
 }

@@ -8,11 +8,15 @@
 import Foundation
 import TunesearchCorePorts
 
-class TunesSearchEngineAdapter : TunesSearchEngine {
+public class TunesSearchEngineAdapter : TunesSearchEngine {
+    
+    public init() {
+        
+    }
     
     var api = ITunesSearchAPI()
     
-    func getSongs(searchTerm: String, completion: @escaping (Swift.Result<[Track], Error>) -> Void) {
+    public func getSongs(searchTerm: String, completion: @escaping (Swift.Result<[Track], Error>) -> Void) {
         api.fetchData(searchTerm: searchTerm) {
             completion($0.map({results in results.map({result in result as Track})}))
         }
