@@ -14,17 +14,11 @@
 		6F5EFC9123CEFF83002DDCA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EFC9023CEFF83002DDCA4 /* Preview Assets.xcassets */; };
 		6F5EFC9423CEFF83002DDCA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EFC9223CEFF83002DDCA4 /* LaunchScreen.storyboard */; };
 		6F5EFC9F23CEFF84002DDCA4 /* TuneSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFC9E23CEFF84002DDCA4 /* TuneSearchTests.swift */; };
-		6F5EFCAB23CF3C84002DDCA4 /* BasicCleanArch in Frameworks */ = {isa = PBXBuildFile; productRef = 6F5EFCAA23CF3C84002DDCA4 /* BasicCleanArch */; };
-		6F5EFCAE23CF3CFC002DDCA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6F5EFCAD23CF3CFC002DDCA4 /* Alamofire */; };
-		6F5EFCB423CF3E31002DDCA4 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCB323CF3E31002DDCA4 /* TrackEntity.swift */; };
-		6F5EFCBB23CF3E4B002DDCA4 /* ResultsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCB623CF3E4B002DDCA4 /* ResultsEntity.swift */; };
 		6F5EFCBC23CF3E4B002DDCA4 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCB723CF3E4B002DDCA4 /* SearchInteractor.swift */; };
 		6F5EFCBD23CF3E4B002DDCA4 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCB823CF3E4B002DDCA4 /* SearchRequest.swift */; };
 		6F5EFCBE23CF3E4B002DDCA4 /* TrackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCB923CF3E4B002DDCA4 /* TrackPresenter.swift */; };
-		6F5EFCBF23CF3E4B002DDCA4 /* ITunesSearchGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCBA23CF3E4B002DDCA4 /* ITunesSearchGateway.swift */; };
 		6F5EFCC223CF3E62002DDCA4 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCC123CF3E62002DDCA4 /* TrackViewModel.swift */; };
 		6F5EFCC523CF3E93002DDCA4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F5EFCC723CF3E93002DDCA4 /* Localizable.strings */; };
-		6F5EFCCA23CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCC923CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift */; };
 		6F5EFCCC23CF4D1C002DDCA4 /* TracksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCCB23CF4D1C002DDCA4 /* TracksListView.swift */; };
 		6F5EFCCE23CF5DE9002DDCA4 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EFCCD23CF5DE9002DDCA4 /* CollectionsViewModel.swift */; };
 		6FA41AA725891F36001F7674 /* SearchTermDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA41AA625891F36001F7674 /* SearchTermDTO.swift */; };
@@ -33,7 +27,6 @@
 		6FCDC41323D03B4100DCC8D6 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41223D03B4100DCC8D6 /* CollectionViewModel.swift */; };
 		6FCDC41623D0511200DCC8D6 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FCDC41523D0511200DCC8D6 /* URLImage */; };
 		6FCDC41823D051D100DCC8D6 /* CollectionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCDC41723D051D100DCC8D6 /* CollectionsPresenter.swift */; };
-		6FE154A4257AE3BD006D1297 /* TunesearchMockCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6FE154A3257AE3BD006D1297 /* TunesearchMockCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,16 +51,12 @@
 		6F5EFC9A23CEFF84002DDCA4 /* TuneSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuneSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5EFC9E23CEFF84002DDCA4 /* TuneSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneSearchTests.swift; sourceTree = "<group>"; };
 		6F5EFCA023CEFF84002DDCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F5EFCB323CF3E31002DDCA4 /* TrackEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
-		6F5EFCB623CF3E4B002DDCA4 /* ResultsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsEntity.swift; sourceTree = "<group>"; };
 		6F5EFCB723CF3E4B002DDCA4 /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		6F5EFCB823CF3E4B002DDCA4 /* SearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		6F5EFCB923CF3E4B002DDCA4 /* TrackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackPresenter.swift; sourceTree = "<group>"; };
-		6F5EFCBA23CF3E4B002DDCA4 /* ITunesSearchGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesSearchGateway.swift; sourceTree = "<group>"; };
 		6F5EFCC123CF3E62002DDCA4 /* TrackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		6F5EFCC623CF3E93002DDCA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6F5EFCC823CF3EAF002DDCA4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6F5EFCC923CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesSearchGatewayTests.swift; sourceTree = "<group>"; };
 		6F5EFCCB23CF4D1C002DDCA4 /* TracksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksListView.swift; sourceTree = "<group>"; };
 		6F5EFCCD23CF5DE9002DDCA4 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
 		6FA41AA625891F36001F7674 /* SearchTermDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTermDTO.swift; sourceTree = "<group>"; };
@@ -82,10 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F5EFCAB23CF3C84002DDCA4 /* BasicCleanArch in Frameworks */,
-				6F5EFCAE23CF3CFC002DDCA4 /* Alamofire in Frameworks */,
 				6FCDC41623D0511200DCC8D6 /* URLImage in Frameworks */,
-				6FE154A4257AE3BD006D1297 /* TunesearchMockCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				6F5EFC9E23CEFF84002DDCA4 /* TuneSearchTests.swift */,
-				6F5EFCC923CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift */,
 				6F5EFCA023CEFF84002DDCA4 /* Info.plist */,
 			);
 			path = TuneSearchTests;
@@ -156,7 +141,6 @@
 		6F5EFCB223CF3E26002DDCA4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6F5EFCB323CF3E31002DDCA4 /* TrackEntity.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -166,8 +150,6 @@
 			children = (
 				6F5EFC8B23CEFF7F002DDCA4 /* SearchView.swift */,
 				6F5EFCB723CF3E4B002DDCA4 /* SearchInteractor.swift */,
-				6F5EFCBA23CF3E4B002DDCA4 /* ITunesSearchGateway.swift */,
-				6F5EFCB623CF3E4B002DDCA4 /* ResultsEntity.swift */,
 				6F5EFCB823CF3E4B002DDCA4 /* SearchRequest.swift */,
 				6F5EFCB923CF3E4B002DDCA4 /* TrackPresenter.swift */,
 				6FCDC41723D051D100DCC8D6 /* CollectionsPresenter.swift */,
@@ -205,10 +187,7 @@
 			);
 			name = TuneSearch;
 			packageProductDependencies = (
-				6F5EFCAA23CF3C84002DDCA4 /* BasicCleanArch */,
-				6F5EFCAD23CF3CFC002DDCA4 /* Alamofire */,
 				6FCDC41523D0511200DCC8D6 /* URLImage */,
-				6FE154A3257AE3BD006D1297 /* TunesearchMockCore */,
 			);
 			productName = TuneSearch;
 			productReference = 6F5EFC8423CEFF7F002DDCA4 /* TuneSearch.app */;
@@ -262,10 +241,7 @@
 			);
 			mainGroup = 6F5EFC7B23CEFF7F002DDCA4;
 			packageReferences = (
-				6F5EFCA923CF3C84002DDCA4 /* XCRemoteSwiftPackageReference "basiccleanarch-cocoapod" */,
-				6F5EFCAC23CF3CFC002DDCA4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6FCDC41423D0511200DCC8D6 /* XCRemoteSwiftPackageReference "url-image" */,
-				6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */,
 			);
 			productRefGroup = 6F5EFC8523CEFF7F002DDCA4 /* Products */;
 			projectDirPath = "";
@@ -308,16 +284,13 @@
 				6F5EFC8823CEFF7F002DDCA4 /* AppDelegate.swift in Sources */,
 				6FCDC41323D03B4100DCC8D6 /* CollectionViewModel.swift in Sources */,
 				6FA41AA725891F36001F7674 /* SearchTermDTO.swift in Sources */,
-				6F5EFCBF23CF3E4B002DDCA4 /* ITunesSearchGateway.swift in Sources */,
 				6F5EFC8A23CEFF7F002DDCA4 /* SceneDelegate.swift in Sources */,
 				6FCDC41823D051D100DCC8D6 /* CollectionsPresenter.swift in Sources */,
-				6F5EFCB423CF3E31002DDCA4 /* TrackEntity.swift in Sources */,
 				6F5EFCBE23CF3E4B002DDCA4 /* TrackPresenter.swift in Sources */,
 				6F5EFCC223CF3E62002DDCA4 /* TrackViewModel.swift in Sources */,
 				6FCDC41123D03A4B00DCC8D6 /* TrackRow.swift in Sources */,
 				6F5EFCBD23CF3E4B002DDCA4 /* SearchRequest.swift in Sources */,
 				6F5EFCCE23CF5DE9002DDCA4 /* CollectionsViewModel.swift in Sources */,
-				6F5EFCBB23CF3E4B002DDCA4 /* ResultsEntity.swift in Sources */,
 				6F5EFCCC23CF4D1C002DDCA4 /* TracksListView.swift in Sources */,
 				6F5EFC8C23CEFF7F002DDCA4 /* SearchView.swift in Sources */,
 			);
@@ -327,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F5EFCCA23CF3F0F002DDCA4 /* ITunesSearchGatewayTests.swift in Sources */,
 				6F5EFC9F23CEFF84002DDCA4 /* TuneSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,22 +568,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6F5EFCA923CF3C84002DDCA4 /* XCRemoteSwiftPackageReference "basiccleanarch-cocoapod" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RobinNunkesser/basiccleanarch-cocoapod";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.1;
-			};
-		};
-		6F5EFCAC23CF3CFC002DDCA4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = "5.0.0-rc.3";
-			};
-		};
 		6FCDC41423D0511200DCC8D6 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
@@ -620,36 +576,13 @@
 				minimumVersion = 0.9.9;
 			};
 		};
-		6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-mockcore-spm.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6F5EFCAA23CF3C84002DDCA4 /* BasicCleanArch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6F5EFCA923CF3C84002DDCA4 /* XCRemoteSwiftPackageReference "basiccleanarch-cocoapod" */;
-			productName = BasicCleanArch;
-		};
-		6F5EFCAD23CF3CFC002DDCA4 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6F5EFCAC23CF3CFC002DDCA4 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		6FCDC41523D0511200DCC8D6 /* URLImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6FCDC41423D0511200DCC8D6 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
-		};
-		6FE154A3257AE3BD006D1297 /* TunesearchMockCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6FE154A2257AE3BD006D1297 /* XCRemoteSwiftPackageReference "explicitarchitecture-tunesearch-mockcore-spm" */;
-			productName = TunesearchMockCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,12 +1,12 @@
 import XCTest
-@testable import TuneSearch
+@testable import TuneSearchInfrastructure
 
-class ITunesSearchGatewayTests : XCTestCase {
+class ITunesSearchAPITests : XCTestCase {
     
     func testFetch() {
         let expectation = self.expectation(description: "Async complete")
-        let gateway = ITunesSearchGateway()
-        gateway.fetchData(searchTerm: "Jack", completion:
+        let api = ITunesSearchAPI()
+        api.fetchData(searchTerm: "Jack", completion:
             {
                 switch $0 {
                 case let .success(response):

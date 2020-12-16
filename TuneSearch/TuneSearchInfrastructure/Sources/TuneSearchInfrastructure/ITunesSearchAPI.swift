@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class ITunesSearchGateway {
+class ITunesSearchAPI {
     let baseURLString = "https://itunes.apple.com/search"
         
     func restURL(_ parameters: [String:String]?) -> URL? {
@@ -25,7 +25,7 @@ class ITunesSearchGateway {
         return components.url!
     }
     
-    func fetchData(searchTerm: String, completion: @escaping (Swift.Result<[TrackEntity],Error>) -> Void) {
+    func fetchData(searchTerm: String, completion: @escaping (Swift.Result<[Result],Error>) -> Void) {
         if let url = restURL(["term":"\(searchTerm)","entity":"song","country":"de"]) {
             AF.request(url)
                 .validate()
@@ -35,9 +35,10 @@ class ITunesSearchGateway {
                     case .success:
                         do {
                             let decoder = JSONDecoder()
-                             let items = try decoder.decode(ResultsEntity.self,
-                             from: response.data!)
-                            completion(Swift.Result<[TrackEntity],Error>.success(items.results))
+                            let data = response.data!
+                            let items = try decoder.decode(Results.self,
+                             from: data)
+                            completion(Swift.Result<[Result],Error>.success(items.results!))
                         } catch {
                             completion(Swift.Result.failure(error))
                         }
@@ -47,5 +48,5 @@ class ITunesSearchGateway {
             }
         }
     }
-        //ITunesSearchAPI.restURL(["term":"\(artist) \(album)","entity":"song","country":"de"])
+        
 }
