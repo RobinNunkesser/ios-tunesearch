@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import BasicCleanArch
 import TuneSearchCore
 import TuneSearchInfrastructure
 
