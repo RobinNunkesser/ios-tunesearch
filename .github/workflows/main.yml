@@ -5,5 +5,11 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: ./.github/scripts/build.sh
-        shell: sh
+      - run: gem install xcpretty
+      - run: |
+          cd TuneSearch
+          set -o pipefail && xcodebuild test -enableCodeCoverage YES \
+          -workspace TuneSearch.xcworkspace -scheme TuneSearch \
+          -sdk iphonesimulator \ 
+          -destination 'platform=iOS Simulator,name=iPhone 11' \ 
+          ONLY_ACTIVE_ARCH=NO | xcpretty
