@@ -16,20 +16,11 @@ public class ConcreteSearchTracksCommand : SearchTracksCommand {
     let tunesSearchEngine : TunesSearchEngine
     
     public func execute(inDTO: SearchTerm, completion: @escaping (Result<[TrackCollection], Error>) -> Void) {
-        tunesSearchEngine.getSongs(searchTerm: inDTO.term) {tracksResult in
-            
-            completion(tracksResult.map {
+        tunesSearchEngine.getSongs(searchTerm: inDTO.term) {
+            completion($0.map {
                 tracks in
                 var collections : [String:TrackCollection] = [:]
-                for track in tracks.sorted(by: {(lhs,rhs) in
-                    if lhs.collectionName != rhs.collectionName {
-                                return lhs.collectionName ?? "" < rhs.collectionName ?? ""
-                            }
-                            if lhs.discNumber != rhs.discNumber {
-                                return lhs.discNumber ?? 0 < rhs.discNumber ?? 0
-                            }
-                            return lhs.trackNumber ?? 0 < rhs.trackNumber ?? 0
-                }) {
+                for track in tracks.sorted(by: self.trackCompare) {
                     if !collections.keys.contains(track.collectionName!) {
                         collections[track.collectionName!] = ConcreteTrackCollection(name: track.collectionName!, tracks: [])
                     }
@@ -38,8 +29,20 @@ public class ConcreteSearchTracksCommand : SearchTracksCommand {
                 let values = Array(collections.values)
                 return values
             })
-                                    
+            
         }
     }
     
+    func trackCompare(lhs: Track, rhs: Track) -> Bool {
+        if lhs.collectionName != rhs.collectionName {
+            return lhs.collectionName ?? "" < rhs.collectionName ?? ""
+        }
+        if lhs.discNumber != rhs.discNumber {
+            return lhs.discNumber ?? 0 < rhs.discNumber ?? 0
+        }
+        return lhs.trackNumber ?? 0 < rhs.trackNumber ?? 0
+        
+    }
+    
 }
+
